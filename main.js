@@ -72,6 +72,17 @@ class MyArray {
       }
       return newArray;
     }
+    reverse(){
+      let right = this.length - 1;
+
+      for (let left = 0; left <= right; left ++) { 
+        const value = this.data[left];
+        this.data[left] = this.data[right];
+        this.data[right] = value;
+
+        right--;
+      }
+    }
 }
 
 const myArray = new MyArray();
@@ -79,5 +90,3 @@ myArray.push('juan');
 myArray.push('oscar');
 myArray.push('roro');
 myArray.push('lala');
-
-console.log(myArray);
